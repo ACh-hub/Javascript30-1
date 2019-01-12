@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript30 - day 1</title>
+    <script type="text/javascript" src="./js/equalizer.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item header" >
+                Javascript30
+            </div>
+            <div class="grid-item header right" >
+                Day 1
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-item">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <div id="equalizer"></div>
+
+        <div class="grid buttons">
+            <div class="grid-item button">
+                <input type="button" data-key="65" class="key" value="A clap">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="83" class="key" value="S hihat">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="68" class="key" value="D kick">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="70" class="key" value="F openhat">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="71" class="key" value="G boom">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="72" class="key" value="H ride">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="74" class="key" value="J snare">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="75" class="key" value="K tom">
+            </div>
+            <div class="grid-item button">
+                <input type="button" data-key="76" class="key" value="L tink">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-item footer">
+                Footer
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio data-key="65" src="./sounds/clap.wav"></audio>
+<audio data-key="83" src="./sounds/hihat.wav"></audio>
+<audio data-key="68" src="./sounds/kick.wav"></audio>
+<audio data-key="70" src="./sounds/openhat.wav"></audio>
+<audio data-key="71" src="./sounds/boom.wav"></audio>
+<audio data-key="72" src="./sounds/ride.wav"></audio>
+<audio data-key="74" src="./sounds/snare.wav"></audio>
+<audio data-key="75" src="./sounds/tom.wav"></audio>
+<audio data-key="76" src="./sounds/tink.wav"></audio>
+
+</body>
+</html>
