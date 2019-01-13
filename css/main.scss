@@ -17,9 +17,6 @@ $color-background: #F1FFF9;
   src: url("../fonts/Montserrat-Regular.otf");
 }
 
-//$baseline: 22px;
-
-
 * {
   margin: 0;
   padding: 0;
@@ -29,29 +26,38 @@ $color-background: #F1FFF9;
 .container {
   display: flex;
   height: 100vh;
-
+  
   aside {
     background-color: white;
     width: 10%;
   }
-
+  
 }
-
 .column {
   width: 80%;
-
-  header {
-    background-color: $color-sandy-yellow;
-    height: 10vh;
-  }
-
+  
   main {
-    height: 85vh;
+    height: 95vh;
     width: 100%;
 
+    .title{
+      width: 80%;
+      position: fixed;
+      top: 10vh;
+      left: 10vw;
+      z-index: 3;
+      display: flex;
+      align-items: center ;
+      justify-content: center;
+
+      .drum{
+        width: 50vw;
+      }
+    }
+    
     .equalizer{
       height: inherit;
-
+      
       #canvas {
         background-image: linear-gradient($color-orange,$color-sandy-yellow);
         width: 100%;
@@ -66,15 +72,15 @@ $color-background: #F1FFF9;
       bottom: 4vh;
       z-index: 2;
       width: 80%;
-    
+      
       .cls-1 {
         fill: #537aa3;
       }
-
+      
       .cls-2 {
         fill: $color-sea-green;
       }
-
+      
       .cls-3 {
         fill: $color-background;
       }
@@ -87,7 +93,7 @@ $color-background: #F1FFF9;
       position: absolute;
       bottom: 1vh;
       z-index: 3;
-
+      
       input[type="button"] {
         width: 150px;
         height: 30px;
@@ -100,82 +106,84 @@ $color-background: #F1FFF9;
         border-color: $color-peach;
         border-radius: 2px;
         margin: 5px;
-
+        
       }
-
+      
       input[type="button"]:hover {
         background-color: rgba(252, 238, 181, 0.5);
       }
-
+      
       input[type="button"]:active {
         background-color: rgba(252, 238, 181, 0.5);
         border-width: 1px;
       }
-
+      
     }
   }
   footer {
     background-color: $color-background;
-    height: 20vh;
+    height: 8vh;
+    font-family: montserrat, sans-serif;
+    font-size: 0.8em;
+    color: $color-pink;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+    span{
+      a{
+        :link {
+          color: $color-pink;
+        }
+        
+        :visited {
+          color: $color-peach;
+        }
+        
+        :hover {
+          color: $color-orange;
+        }
+        
+        :active {
+          color: $color-sandy-yellow;
+        }
+      }
+    }
+    
+    
   }
+  
 }
 
 
 // Device - Most of the Smartphones Mobiles (Portrait)
 // Screen - B/w 320px to 479px
 @media (min-width: 320px) and (max-width: 480px) {
-
+  
   .container aside {
     width: 0vw;
   }
+
   .column {
     width: 100vw;
   }
+
   .column main .wave {
     width: 100%;
   }
 
+  img .drum{
+    width: 90vw;
+  }
+
+  .column main .buttons{
+    width: 100%;
+    bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+  }
 }
 
-//.row {
-//  display: flex;
-//}
-
-//.foot {
-//  background-color: $color-background;
-//  height: 10%;
-//  font-family: montserrat, sans-serif;
-//  font-size: 0.8em;
-//  color: $color-pink;
-//  text-align: right;
-//}
-//
-//.attribution a:link {
-//  color: $color-pink;
-//}
-//
-//.attribution a:visited {
-//  color: $color-peach;
-//}
-//
-//.attribution a:hover {
-//  color: $color-orange;
-//}
-//
-//.attribution a:active {
-//  color: $color-sandy-yellow;
-//}
-//
-
-//
-//
-//.logo {
-//  color: $color-peach;
-//  font-family: didotFont, didot;
-//  font-size: 4em;
-//  text-align: left;
-//  z-index: 2;
-//  text-shadow: 3px 3px 0px $color-orange, 6px 6px 0px $color-sandy-yellow;
-//}
-//
 

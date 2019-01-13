@@ -20,12 +20,20 @@
 
 .column {
   width: 80%; }
-  .column header {
-    background-color: #FCEEB5;
-    height: 10vh; }
   .column main {
-    height: 85vh;
+    height: 95vh;
     width: 100%; }
+    .column main .title {
+      width: 80%;
+      position: fixed;
+      top: 10vh;
+      left: 10vw;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .column main .title .drum {
+        width: 50vw; }
     .column main .equalizer {
       height: inherit; }
       .column main .equalizer #canvas {
@@ -73,7 +81,21 @@
         border-width: 1px; }
   .column footer {
     background-color: #F1FFF9;
-    height: 20vh; }
+    height: 8vh;
+    font-family: montserrat, sans-serif;
+    font-size: 0.8em;
+    color: #CC5376;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; }
+    .column footer span a :link {
+      color: #CC5376; }
+    .column footer span a :visited {
+      color: #EE786E; }
+    .column footer span a :hover {
+      color: #F2B691; }
+    .column footer span a :active {
+      color: #FCEEB5; }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .container aside {
@@ -81,4 +103,12 @@
   .column {
     width: 100vw; }
   .column main .wave {
-    width: 100%; } }
+    width: 100%; }
+  img .drum {
+    width: 90vw; }
+  .column main .buttons {
+    width: 100%;
+    bottom: 10vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center; } }
