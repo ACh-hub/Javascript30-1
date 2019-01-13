@@ -3,65 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript30 - day 1</title>
-    <script type="text/javascript" src="./js/equalizer.js" defer></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<div class="wrapper">
-    <div class="container">
-        <div class="grid">
-            <div class="grid-item header" >
-                Javascript30
-            </div>
-            <div class="grid-item header right" >
-                Day 1
-            </div>
-        </div>
+<div class="container">
+    <aside>
+        <p>I'm an aside</p>
+    </aside>
+    <div class="column">
+        <header>
+            <p>I'm a header and i need a minimum height of fancy javascript30 title and drum</p>
+        </header>
+        <main>
+            <div class="equalizer">
+                <canvas id="canvas">
 
-        <div class="grid">
-            <div class="grid-item">
-                <canvas id="canvas"></canvas>
+                </canvas>
             </div>
-        </div>
-
-        <div id="equalizer"></div>
-
-        <div class="grid buttons">
-            <div class="grid-item button">
+            <div class="wave">
+                <svg id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1367 394.96">
+                    <path class="cls-1"
+                          d="M0,227s16-41,58-83,95-34,131,0,47,89,97,89S399,105,471,103s121,98,199,93S829.77,71,877,47c53-27,96.65-23.69,130,34,37,64,33,144,94,142,117.55-3.86,110-112,168-176s98-44,98-44l-2,391L0,393Z"></path>
+                    <path class="cls-2"
+                          d="M0,393V281S66,143,114,144s69,34,84,52,23,34,54,65c16.45,16.45,49,32,112,8s78.7-124,138-124c38,0,65,36,98,61,31.1,23.56,92,19,132-4S835.21,110.89,877,97c36-12,93.86-8.89,116,18,42,51,30,120,69,126,32.75,5,68.43-9.69,124-38,53-27,111-86,143-141,19.08-32.8,38-24,38-24l-2,356Z"></path>
+                    <path class="cls-3"
+                          d="M1367,395,0,394V295s69.53-115.83,139.5-113.5c60,2,21.51,117.07,188.5,118.5,117,1,145.5-100.5,198.5-100.5s24,52,132,52,143-104,242-108,41,125,163,124S1367,140,1367,140Z"></path>
+                </svg>
+            </div>
+            <div class="buttons">
                 <input type="button" data-key="65" class="key" value="A clap">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="83" class="key" value="S hihat">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="68" class="key" value="D kick">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="70" class="key" value="F openhat">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="71" class="key" value="G boom">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="72" class="key" value="H ride">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="74" class="key" value="J snare">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="75" class="key" value="K tom">
-            </div>
-            <div class="grid-item button">
                 <input type="button" data-key="76" class="key" value="L tink">
             </div>
-        </div>
 
-        <div class="grid">
-            <div class="grid-item footer">
-                Footer
-            </div>
-        </div>
+        </main>
+        <footer>
+            <p>I'm a footer and i contain credits and attributions all such stuff</p>
+        </footer>
     </div>
+    <aside>
+        <p>I'm an aside</p>
+    </aside>
 </div>
 
 <audio data-key="65" src="./sounds/clap.wav"></audio>
@@ -73,6 +61,8 @@
 <audio data-key="74" src="./sounds/snare.wav"></audio>
 <audio data-key="75" src="./sounds/tom.wav"></audio>
 <audio data-key="76" src="./sounds/tink.wav"></audio>
+
+<script type="module" src="./js/equalizer.js" defer></script>
 
 </body>
 </html>

@@ -1,115 +1,71 @@
 @font-face {
   font-family: didotFont;
-  src: url("../fonts/Sail-Regular.otf");
-}
+  src: url("../fonts/Sail-Regular.otf"); }
+
 @font-face {
   font-family: montserrat;
-  src: url("../fonts/Montserrat-Regular.otf");
-}
-body {
-  background: #F1FFF9;
-}
+  src: url("../fonts/Montserrat-Regular.otf"); }
 
-.grid {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-}
+  height: 100vh; }
+  .container aside {
+    background-color: white;
+    width: 10%; }
 
-.grid-item {
-  flex: 1;
-  z-index: 2;
-}
-
-#canvas {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  z-index: 2;
-}
-
-.header {
-  color: #EE786E;
-  font-family: didotFont, didot;
-  font-size: 4em;
-  line-height: 66px;
-  text-align: left;
-  z-index: 2;
-}
-
-.header.right {
-  text-align: right;
-  font-size: 1.5em;
-  line-height: 88px;
-  z-index: 2;
-}
-
-#equalizer {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), white, rgba(255, 255, 255, 0));
-  background-size: 100% 5px;
-  animation: bg 1s infinite linear;
-  z-index: 2;
-  opacity: 0.3;
-}
-
-*:focus {
-  outline: none;
-}
-
-.buttons {
-  width: 100%;
-  position: fixed;
-  top: 300px;
-  left: 0;
-  z-index: 2;
-}
-
-.button input[type=button] {
-  width: 80px;
-  height: 30px;
-  font-family: montserrat, sans-serif;
-  font-size: 1em;
-  color: #EE786E;
-  background-color: rgba(252, 238, 181, 0.1);
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: #EE786E;
-  border-radius: 2px;
-}
-
-.button input[type=button]:hover {
-  background-color: rgba(252, 238, 181, 0.5);
-}
-
-.button input[type=button]:active {
-  background-color: rgba(252, 238, 181, 0.5);
-  border-width: 1px;
-}
-
-@keyframes bg {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 5px 5px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header {
-    font-size: 2em;
-  }
-
-  .header.right {
-    font-size: 1em;
-    line-height: 74.8px;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
+.column {
+  width: 80%; }
+  .column header {
+    background-color: #FCEEB5;
+    height: 10vh; }
+  .column main {
+    height: 85vh;
+    width: 100%; }
+    .column main .equalizer {
+      height: inherit; }
+      .column main .equalizer #canvas {
+        background-image: linear-gradient(#F2B691, #FCEEB5);
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        left: 0;
+        z-index: 1; }
+    .column main .wave {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 80%; }
+      .column main .wave .cls-1 {
+        fill: #487bbe; }
+      .column main .wave .cls-2 {
+        fill: #A2CCB6; }
+      .column main .wave .cls-3 {
+        fill: #F1FFF9; }
+    .column main .buttons {
+      position: absolute;
+      bottom: 3vh;
+      z-index: 3; }
+      .column main .buttons input[type="button"] {
+        width: 100px;
+        height: 30px;
+        font-family: montserrat, sans-serif;
+        font-size: 1em;
+        color: #EE786E;
+        background-color: rgba(252, 238, 181, 0.1);
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: #EE786E;
+        border-radius: 2px; }
+      .column main .buttons input[type="button"]:hover {
+        background-color: rgba(252, 238, 181, 0.5); }
+      .column main .buttons input[type="button"]:active {
+        background-color: rgba(252, 238, 181, 0.5);
+        border-width: 1px; }
+  .column footer {
+    background-color: darkkhaki;
+    height: 20vh; }
