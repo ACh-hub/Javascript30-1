@@ -22,7 +22,7 @@ window.onload = () => {
         requestAnimationFrame(renderFrame);
         let xAxis = 0;
         analyser.getByteFrequencyData(dataArray);
-        
+
         const gradient = canvasContext.createLinearGradient(0, 0, 0, canvas.height);
         gradient.addColorStop(0,"#F2B691");
         gradient.addColorStop(1,"#FCEEB5");
@@ -33,7 +33,7 @@ window.onload = () => {
         const barGap = 6;
 
         for (let i = 0; i < bufferLength; i++) {
-            let barHeight = dataArray[i] * 2.5;
+            let barHeight = dataArray[i] * 8;
 
             let r, g, b, a;
 

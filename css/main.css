@@ -37,21 +37,25 @@
         z-index: 1; }
     .column main .wave {
       position: absolute;
-      bottom: 0;
+      bottom: 4vh;
       z-index: 2;
       width: 80%; }
       .column main .wave .cls-1 {
-        fill: #487bbe; }
+        fill: #537aa3; }
       .column main .wave .cls-2 {
         fill: #A2CCB6; }
       .column main .wave .cls-3 {
         fill: #F1FFF9; }
     .column main .buttons {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
       position: absolute;
-      bottom: 3vh;
+      bottom: 1vh;
       z-index: 3; }
       .column main .buttons input[type="button"] {
-        width: 100px;
+        width: 150px;
         height: 30px;
         font-family: montserrat, sans-serif;
         font-size: 1em;
@@ -60,12 +64,21 @@
         border-style: solid;
         border-width: 0.5px;
         border-color: #EE786E;
-        border-radius: 2px; }
+        border-radius: 2px;
+        margin: 5px; }
       .column main .buttons input[type="button"]:hover {
         background-color: rgba(252, 238, 181, 0.5); }
       .column main .buttons input[type="button"]:active {
         background-color: rgba(252, 238, 181, 0.5);
         border-width: 1px; }
   .column footer {
-    background-color: darkkhaki;
+    background-color: #F1FFF9;
     height: 20vh; }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container aside {
+    width: 0vw; }
+  .column {
+    width: 100vw; }
+  .column main .wave {
+    width: 100%; } }
